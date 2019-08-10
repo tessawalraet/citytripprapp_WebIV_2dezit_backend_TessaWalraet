@@ -13218,11 +13218,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TessaWalraet\\Documents\\CityTrippr\\backend\\CityTrippr\\CityTrippr.csproj",
+      "projectUniqueName": "C:\\Users\\TessaWalraet\\Documents\\CityTrippr\\backend\\citytripprapp_WebIV_2dezit_backend_TessaWalraet\\CityTrippr\\CityTrippr.csproj",
       "projectName": "CityTrippr",
-      "projectPath": "C:\\Users\\TessaWalraet\\Documents\\CityTrippr\\backend\\CityTrippr\\CityTrippr.csproj",
+      "projectPath": "C:\\Users\\TessaWalraet\\Documents\\CityTrippr\\backend\\citytripprapp_WebIV_2dezit_backend_TessaWalraet\\CityTrippr\\CityTrippr.csproj",
       "packagesPath": "C:\\Users\\TessaWalraet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TessaWalraet\\Documents\\CityTrippr\\backend\\CityTrippr\\obj\\",
+      "outputPath": "C:\\Users\\TessaWalraet\\Documents\\CityTrippr\\backend\\citytripprapp_WebIV_2dezit_backend_TessaWalraet\\CityTrippr\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
