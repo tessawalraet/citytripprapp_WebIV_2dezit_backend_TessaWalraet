@@ -18,7 +18,7 @@ namespace CityTrippr.Controllers
 
         public UserProfileController(UserManager<ApplicationUser> userManager)
         {
-
+            _userManager = userManager;
         }
 
         //GET: /api/UserProfile
@@ -33,6 +33,7 @@ namespace CityTrippr.Controllers
             {
                 user.FirstName,
                 user.LastName,
+                user.Email,
                 user.UserName
             };
         }
