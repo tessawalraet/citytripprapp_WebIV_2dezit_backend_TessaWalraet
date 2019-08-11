@@ -14,10 +14,12 @@ namespace CityTrippr.Controllers
     public class TripController : ControllerBase
     {
         private readonly TripContext _context;
+        //private readonly ITripRepository _tripRepo;
 
         public TripController(TripContext context)
         {
             _context = context;
+            //_tripRepo = tripRepo;
         }
 
         // GET: api/Trip
@@ -25,6 +27,19 @@ namespace CityTrippr.Controllers
         public async Task<ActionResult<IEnumerable<Trip>>> GetTrips()
         {
             return await _context.Trips.ToListAsync();
+
+            //return _tripRepo.GetAll().Select(t => new Trip
+            //{
+            //    TripId = t.TripId,
+            //    Destination = t.Destination,
+            //    Description = t.Description,
+            //    Highlight = t.Highlight,
+            //    Days = t.Days,
+            //    Related = t.Related,
+            //    Food = t.Food,
+            //    Weather = t.Weather,
+            //    Experience = t.Experience
+            //}).OrderBy(t => t.Destination);
         }
 
         // GET: api/Trip/5
