@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CityTrippr.Models;
@@ -14,12 +12,10 @@ namespace CityTrippr.Controllers
     public class TripController : ControllerBase
     {
         private readonly TripContext _context;
-        //private readonly ITripRepository _tripRepo;
 
         public TripController(TripContext context)
         {
             _context = context;
-            //_tripRepo = tripRepo;
         }
 
         // GET: api/Trip
@@ -27,19 +23,6 @@ namespace CityTrippr.Controllers
         public async Task<ActionResult<IEnumerable<Trip>>> GetTrips()
         {
             return await _context.Trips.ToListAsync();
-
-            //return _tripRepo.GetAll().Select(t => new Trip
-            //{
-            //    TripId = t.TripId,
-            //    Destination = t.Destination,
-            //    Description = t.Description,
-            //    Highlight = t.Highlight,
-            //    Days = t.Days,
-            //    Related = t.Related,
-            //    Food = t.Food,
-            //    Weather = t.Weather,
-            //    Experience = t.Experience
-            //}).OrderBy(t => t.Destination);
         }
 
         // GET: api/Trip/5
@@ -54,36 +37,6 @@ namespace CityTrippr.Controllers
             }
 
             return trip;
-        }
-
-        // PUT: api/Trip/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutTrip(int id, Trip trip)
-        {
-            if (id != trip.TripId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(trip).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TripExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
         // POST: api/Trip
